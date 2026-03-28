@@ -37,7 +37,6 @@
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans overflow-hidden h-screen flex flex-col">
 
-  <!-- Header -->
   <header class="flex items-center justify-between p-4 bg-slate-800 border-b border-slate-700 shadow-md z-10 shrink-0">
     <div class="flex items-center space-x-2">
       <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
@@ -62,10 +61,8 @@
 
   <div class="flex flex-1 overflow-hidden relative">
     
-    <!-- Main Chat Area -->
     <main class="flex-1 overflow-y-auto p-4 md:p-8 flex flex-col" id="chat-container">
       
-      <!-- Error Notice -->
       <div id="error-container" class="hidden items-center p-4 mb-4 text-sm text-red-400 rounded-lg bg-red-900/20 border border-red-800 shrink-0" role="alert">
         <i data-lucide="alert-circle" class="w-5 h-5 flex-shrink-0 mr-2"></i>
         <span><span class="font-medium">Notice:</span> <span id="error-text"></span></span>
@@ -97,7 +94,6 @@
       </div>
     </main>
 
-    <!-- Task Sidebar -->
     <aside id="task-sidebar" class="hidden w-80 bg-slate-800 border-l border-slate-700 flex-col animate-slide-in-right shrink-0 absolute right-0 top-0 bottom-0 z-20 md:relative shadow-2xl md:shadow-none">
       <div class="p-4 border-b border-slate-700 flex items-center justify-between shrink-0">
         <h2 class="font-semibold text-slate-200 flex items-center gap-2">
@@ -112,7 +108,6 @@
     </aside>
   </div>
 
-  <!-- Control Area (Bottom) -->
   <footer class="p-4 md:p-6 bg-slate-800 border-t border-slate-700 flex flex-col items-center justify-center shrink-0 z-10">
     <div class="h-6 mb-3 flex items-center justify-center" id="footer-status-area">
       <div id="visualizer" class="hidden flex space-x-1">
@@ -158,10 +153,8 @@
 
   <script>
     // --- Configuration ---
-    // IMPORTANT: Update this variable after you deploy your backend to Render!
-    const BACKEND_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-        ? 'http://localhost:3000' 
-        : ''; // <-- Example: 'https://my-backend.onrender.com'
+    // This is now perfectly linked to your live Render backend!
+    const BACKEND_URL = 'https://agentic-voice-system-1.onrender.com';
 
     // --- State Management ---
     const state = {
